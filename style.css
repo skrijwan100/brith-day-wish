@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+.hdb{
+    text-align: center;
+}
+.gif{
+    height: 130px;
+}
+#Date{
+    margin-bottom: 30px;
+}
+.imgs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+html,
+body {
+	display: grid;
+	height: 100%;
+	width: 100%;
+	place-items: center;
+	background-image: url("https://i.pinimg.com/originals/36/79/a5/3679a5e35cda35ba467115b41638b626.gif");
+	background-size: cover;
+}
+
+p {
+	color: #86fcef;
+}
+
+h1 {
+	font-size: 60px;
+	color: cyan;
+	animation: glow 1s ease-in-out infinite alternate;
+}
+
+h3 {
+	color: cyan;
+}
+
+button {
+	display: inline-block;
+	position: absolute;
+	cursor: pointer;
+	color: black;
+	font-style: bold;
+	font-family: sans-serif;
+	font-size: 20px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #23252f;
+	text-decoration: none;
+	padding: 20px 45px;
+	border-radius: 9px;
+	background: #64ed85;
+	box-shadow: 3px 3px 6px #296137, -3px -3px 6px #9fffd3;
+	transition: all 0.3s;
+	/* shine effect */
+	background-repeat: no-repeat;
+	background-position: -135px -135px, 0 0;
+	background-image: -webkit-linear-gradient(
+		top left,
+		rgba(255, 255, 255, 0.2) 0%,
+		rgba(255, 255, 255, 0.2) 37%,
+		rgba(255, 255, 255, 0.8) 45%,
+		rgba(255, 255, 255, 0) 50%
+	);
+	background-size: 250% 250%, 100% 100%;
+	transition: background-position 0s ease;
+}
+
+::selection {
+	color: blue;
+	background: #1cc7d0;
+}
+
+.wrapper {
+	height: 400px;
+    margin-bottom: 20px;
+	width: 320px;
+	position: relative;
+	transform-style: preserve-3d;
+	perspective: 1000px;
+}
+
+.wrapper .card {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	padding: 5px;
+	background: linear-gradient(385deg, purple, #0004ff);
+	border-radius: 10px;
+	transform: translateY(0deg);
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+	box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+	transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.wrapper:hover > .front-face {
+	transform: rotateY(-180deg);
+}
+
+.wrapper .card img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+.wrapper .back-face {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-direction: column;
+	transform: rotateY(180deg);
+}
+
+.wrapper:hover > .back-face {
+	transform: rotateY(0deg);
+}
+
+.wrapper .back-face img {
+	height: 150px;
+	width: 150px;
+	padding: 5px;
+	border-radius: 50%;
+	background: linear-gradient(375deg, #001aff, #0084ff);
+	box-shadow: 0 0 5px #d3b3fc, 0 0 25px #f1edf7, 0 0 50px #f2f0f5,
+		0 0 100px #c9b3fc, 0 0 170px #999aad;
+}
+
+.wrapper .back-face .info {
+	text-align: center;
+}
+
+.back-face .info .title {
+	font-size: 30px;
+	font-weight: 500;
+}
+
+.back-face ul {
+	display: flex;
+}
+
+.back-face ul a {
+	display: block;
+	height: 40px;
+	width: 40px;
+	color: #fff;
+	text-align: center;
+	margin: 0 5px;
+	line-height: 38px;
+	border: 2px solid transparent;
+	border-radius: 50%;
+	background: linear-gradient(375deg, #1cc7d0, #2ede98);
+	transition: all 0.5s ease;
+}
+
+.back-face ul a:hover {
+	color: #1cc7d0;
+	border-color: #1cc7d0;
+	background: linear-gradient(375deg, transparent, transparent);
+}
+
+.a {
+	position: fixed;
+	bottom: 500px;
+	right: 340px;
+	width: 100px;
+	height: 80px;
+	border-radius: 100%;
+}
+
+@-webkit-keyframes glow {
+	from {
+		text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px blue, 0 0 40px blue,
+			0 0 50px blue, 0 0 60px blueviolet, 0 0 70px blue;
+	}
+
+	to {
+		text-shadow: 0 0 20px #fff, 0 0 30px #4dfcff, 0 0 40px #4dfcff,
+			0 0 50px #4dfcff, 0 0 60px #4dfcff, 0 0 70px #4dfcff, 0 0 80px #4dfcff;
+	}
+}
+
+#wholeThingie {
+	bottom: 500px;
+}
+
+#fontsoide {
+	cursor: pointer;
+}
+
+button:active {
+	border-radius: 25px;
+	border-radius: 9px;
+	background: #64ed85;
+	box-shadow: inset 3px 3px 6px #296137, inset -3px -3px 6px #9fffd3;
+}
+
+button:hover {
+	transform: translate(-50%, -50%) scale(1.03);
+	background-position: 0 0, 0 0;
+	transition-duration: 0.9s;
+}
